@@ -10,6 +10,7 @@ formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
+
 def parse_sensor_data(hex_data):
     hex_pairs = [hex_data[i:i + 8] for i in range(0, len(hex_data), 8)]
     logger.info('подключение к БД...')
